@@ -79,31 +79,23 @@
         .robot-icon {
             width: 40px;
             height: 40px;
-            background: #e0e0e0;
+            background: transparent;
             border: 2px solid #ccc;
             border-radius: 4px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
             transition: all 0.3s ease;
             flex-shrink: 0;
             position: relative;
-        }
-
-        .robot-icon::before {
-            content: '🤖';
-            filter: grayscale(100%) opacity(0.5);
-            transition: filter 0.3s ease;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
         }
 
         .nav-link:hover .robot-icon {
-            background: #1a1a1a;
+            background-image: url('assets/images/landing/small_robot.png');
             border-color: #1a1a1a;
-        }
-
-        .nav-link:hover .robot-icon::before {
-            filter: grayscale(0%) opacity(1);
         }
 
         /* Right side - Image placeholder */
@@ -115,7 +107,7 @@
         .image-placeholder {
             width: 100%;
             aspect-ratio: 3/4;
-            background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+            /* background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%); */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -199,7 +191,7 @@
     <div class="home-container">
         <!-- Left side - Navigation -->
         <div class="nav-section">
-            <h1 class="site-title">Tal Kachman</h1>
+            <h1 class="site-title">Complex Learning Group</h1>
             <p class="site-subtitle">Radboud University & Yale School of Management</p>
 
             <ul class="nav-list">
@@ -222,9 +214,15 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="students.html" class="nav-link">
+                    <a href="information_for_prospective_students.html" class="nav-link">
                         <span class="robot-icon" data-robot="off"></span>
                         <span>Prospective Students</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="code.html" class="nav-link">
+                        <span class="robot-icon" data-robot="off"></span>
+                        <span>Code</span>
                     </a>
                 </li>
                 <li class="nav-item">
@@ -239,7 +237,7 @@
         <!-- Right side - Image placeholder -->
         <div class="image-section">
             <div class="image-placeholder">
-                [Your image here - replace with actual photo]
+                <img src="/assets/images/landing/black_board.png" alt="Tal Kachman" style="width: 100%; height: auto;">
             </div>
         </div>
     </div>

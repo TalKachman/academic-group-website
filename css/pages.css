@@ -143,6 +143,211 @@ main.page-content a:hover {
     color: #666;
 }
 
+/* Students Showcase */
+.students-showcase {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0 3rem 0;
+}
+
+.student-card {
+    background: #f8f9fa;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #e0e0e0;
+}
+
+.student-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.student-photo-container {
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    background: #e8e8e8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.student-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.student-card:hover .student-photo {
+    transform: scale(1.05);
+}
+
+.student-details {
+    padding: 1.5rem;
+}
+
+.student-details h4 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.3rem;
+    color: #1a1a1a;
+    font-weight: 600;
+}
+
+.student-role {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.75rem;
+    font-weight: 500;
+}
+
+.student-research {
+    font-size: 0.85rem;
+    color: #444;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Alumni Section */
+.alumni-section {
+    margin-top: 4rem;
+    padding-top: 3rem;
+    border-top: 2px solid #e0e0e0;
+}
+
+.alumni-section h3 {
+    margin-top: 0;
+}
+
+.alumni-list {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.alumni-list li {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #e8e8e8;
+    color: #444;
+}
+
+.alumni-list li:last-child {
+    border-bottom: none;
+}
+
+.alumni-list strong {
+    color: #1a1a1a;
+    font-weight: 600;
+}
+
+/* Person Profile Pages */
+.person-profile {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.profile-header {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.profile-image-large {
+    width: 300px;
+    height: 300px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.profile-image-large img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-info h1 {
+    margin: 0 0 0.5rem 0;
+    font-size: 2rem;
+    color: #1a1a1a;
+}
+
+.profile-info .title {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.profile-info .affiliation {
+    font-size: 0.95rem;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.contact-links {
+    font-size: 0.9rem;
+}
+
+.contact-links a {
+    color: #0066cc;
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+
+.contact-links a:first-child {
+    margin-left: 0;
+}
+
+.contact-links a:hover {
+    text-decoration: underline;
+}
+
+.profile-content section {
+    margin-bottom: 2.5rem;
+}
+
+.profile-content section h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.5rem;
+}
+
+.back-link {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #e0e0e0;
+}
+
+.back-link a {
+    color: #666;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.back-link a:hover {
+    color: #1a1a1a;
+}
+
+/* Make student names clickable */
+.student-details h4 a {
+    color: #1a1a1a;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.student-details h4 a:hover {
+    color: #3498db;
+}
+
 /* Footer */
 footer {
     max-width: 1200px;
@@ -163,6 +368,11 @@ footer {
 
     main.page-content {
         padding: 6rem 2rem 4rem;
+    }
+
+    .students-showcase {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
     }
 }
 
@@ -185,5 +395,14 @@ footer {
 
     main.page-content {
         padding: 5rem 1.5rem 3rem;
+    }
+
+    .students-showcase {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .student-photo-container {
+        height: 250px;
     }
 }
