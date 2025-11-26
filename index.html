@@ -20,8 +20,55 @@
             min-height: 100vh;
         }
 
-        /* Main container */
-        .container {
+        /* Header - only on home page */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #fff;
+            border-bottom: 1px solid #e0e0e0;
+            z-index: 100;
+            display: none;
+        }
+
+        header.show {
+            display: block;
+        }
+
+        header nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.5rem 3rem;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2.5rem;
+            align-items: center;
+        }
+
+        header .site-title {
+            font-size: 1.1rem;
+            font-weight: 400;
+            letter-spacing: 0.3px;
+            margin-right: auto;
+        }
+
+        header nav a {
+            color: #666;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s ease;
+        }
+
+        header nav a:hover,
+        header nav a.active {
+            color: #1a1a1a;
+        }
+
+        /* Main container - home page */
+        .home-container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 4rem 3rem;
@@ -29,6 +76,11 @@
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
             align-items: start;
+            min-height: 100vh;
+        }
+
+        .home-container.hidden {
+            display: none;
         }
 
         /* Left side - Navigation */
@@ -57,7 +109,7 @@
         }
 
         .nav-item {
-            margin-bottom: 1.2rem;
+            margin-bottom: 1.5rem;
         }
 
         .nav-link {
@@ -75,32 +127,35 @@
             transform: translateX(5px);
         }
 
-        .nav-icon {
-            width: 20px;
-            height: 20px;
-            border: 2px solid #1a1a1a;
+        /* Robot icon */
+        .robot-icon {
+            width: 40px;
+            height: 40px;
+            background: #e0e0e0;
+            border: 2px solid #ccc;
+            border-radius: 4px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 0.8rem;
+            font-size: 1.5rem;
             transition: all 0.3s ease;
             flex-shrink: 0;
+            position: relative;
         }
 
-        .nav-link:hover .nav-icon {
+        .robot-icon::before {
+            content: '🤖';
+            filter: grayscale(100%) opacity(0.5);
+            transition: filter 0.3s ease;
+        }
+
+        .nav-link:hover .robot-icon {
             background: #1a1a1a;
-            color: #fff;
+            border-color: #1a1a1a;
         }
 
-        .nav-link.active .nav-icon {
-            background: #1a1a1a;
-            color: #fff;
-        }
-
-        .nav-link.active .nav-icon::before {
-            content: '×';
-            font-size: 1.2rem;
-            line-height: 1;
+        .nav-link:hover .robot-icon::before {
+            filter: grayscale(0%) opacity(1);
         }
 
         /* Right side - Image placeholder */
@@ -126,67 +181,61 @@
             background: linear-gradient(135deg, #e8e8e8 0%, #d8d8d8 100%);
         }
 
-        /* Content sections */
-        .content-section {
-            grid-column: 1 / -1;
-            max-width: 800px;
-            margin-top: 3rem;
-            padding-top: 3rem;
-            border-top: 1px solid #e0e0e0;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
+        /* Content page container */
+        .page-container {
             display: none;
+            padding-top: 6rem;
         }
 
-        .content-section.active {
+        .page-container.active {
             display: block;
         }
 
-        .content-section.visible {
-            opacity: 1;
-            transform: translateY(0);
+        .page-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 3rem 5rem;
         }
 
-        .content-section h2 {
+        .page-content h2 {
             font-size: 1.4rem;
             font-weight: 400;
             margin-bottom: 2rem;
             letter-spacing: 0.3px;
         }
 
-        .content-section h3 {
+        .page-content h3 {
             font-size: 1.1rem;
             font-weight: 500;
             margin-top: 2rem;
             margin-bottom: 1rem;
         }
 
-        .content-section p {
+        .page-content p {
             font-size: 0.95rem;
             line-height: 1.7;
             color: #444;
             margin-bottom: 1rem;
         }
 
-        .content-section ul {
+        .page-content ul {
             margin-left: 1.5rem;
             margin-bottom: 1.5rem;
         }
 
-        .content-section li {
+        .page-content li {
             font-size: 0.95rem;
             line-height: 1.7;
             color: #444;
             margin-bottom: 0.6rem;
         }
 
-        .content-section a {
+        .page-content a {
             color: #0066cc;
             text-decoration: none;
         }
 
-        .content-section a:hover {
+        .page-content a:hover {
             text-decoration: underline;
         }
 
@@ -231,7 +280,7 @@
 
         /* Responsive */
         @media (max-width: 900px) {
-            .container {
+            .home-container {
                 grid-template-columns: 1fr;
                 gap: 3rem;
                 padding: 3rem 2rem;
@@ -246,13 +295,18 @@
                 aspect-ratio: 16/9;
             }
 
-            .content-section {
-                grid-column: 1;
+            header nav ul {
+                flex-wrap: wrap;
+                gap: 1.5rem;
+            }
+
+            .page-content {
+                padding: 2rem 2rem 4rem;
             }
         }
 
         @media (max-width: 640px) {
-            .container {
+            .home-container {
                 padding: 2rem 1.5rem;
             }
 
@@ -263,12 +317,40 @@
             .nav-link {
                 font-size: 0.9rem;
             }
+
+            header nav {
+                padding: 1rem 1.5rem;
+            }
+
+            header nav ul {
+                gap: 1rem;
+            }
+
+            .page-content {
+                padding: 1.5rem 1.5rem 3rem;
+            }
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
+    <!-- Header Navigation (hidden on home, shown on other pages) -->
+    <header id="header">
+        <nav>
+            <ul>
+                <li class="site-title">Tal Kachman</li>
+                <li><a href="#home" class="header-nav-link" data-page="home">Home</a></li>
+                <li><a href="#about" class="header-nav-link" data-page="about">About</a></li>
+                <li><a href="#research" class="header-nav-link" data-page="research">Research</a></li>
+                <li><a href="#group" class="header-nav-link" data-page="group">Group</a></li>
+                <li><a href="#students" class="header-nav-link" data-page="students">Students</a></li>
+                <li><a href="#contact" class="header-nav-link" data-page="contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Page -->
+    <div class="home-container" id="home-page">
         <!-- Left side - Navigation -->
         <div class="nav-section">
             <h1 class="site-title">Tal Kachman</h1>
@@ -276,32 +358,32 @@
 
             <ul class="nav-list">
                 <li class="nav-item">
-                    <a href="#about" class="nav-link" data-section="about">
-                        <span class="nav-icon"></span>
+                    <a href="#about" class="nav-link" data-page="about">
+                        <span class="robot-icon" data-robot="off"></span>
                         <span>About</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#research" class="nav-link" data-section="research">
-                        <span class="nav-icon"></span>
+                    <a href="#research" class="nav-link" data-page="research">
+                        <span class="robot-icon" data-robot="off"></span>
                         <span>Research</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#group" class="nav-link" data-section="group">
-                        <span class="nav-icon"></span>
+                    <a href="#group" class="nav-link" data-page="group">
+                        <span class="robot-icon" data-robot="off"></span>
                         <span>Group</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#students" class="nav-link" data-section="students">
-                        <span class="nav-icon"></span>
+                    <a href="#students" class="nav-link" data-page="students">
+                        <span class="robot-icon" data-robot="off"></span>
                         <span>Prospective Students</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#contact" class="nav-link" data-section="contact">
-                        <span class="nav-icon"></span>
+                    <a href="#contact" class="nav-link" data-page="contact">
+                        <span class="robot-icon" data-robot="off"></span>
                         <span>Contact</span>
                     </a>
                 </li>
@@ -311,22 +393,26 @@
         <!-- Right side - Image placeholder -->
         <div class="image-section">
             <div class="image-placeholder">
-                [Image placeholder]
+                [Your image here - replace with actual photo]
             </div>
         </div>
+    </div>
 
-        <!-- About Section -->
-        <section id="about" class="content-section active visible">
+    <!-- About Page -->
+    <div class="page-container" id="about-page">
+        <div class="page-content">
             <h2>About</h2>
             <p>I am currently an assistant professor in <a href="https://www.ru.nl/english/" target="_blank">Radboud
                     University</a> at the <a href="https://www.ru.nl/ai/" target="_blank">AI department</a> and a
                 visiting assistant professor at the <a href="https://som.yale.edu/" target="_blank">Yale School of
                     Management</a>. My main research focus is on multiagent interaction, complex systems and
                 reinforcment learning</p>
-        </section>
+        </div>
+    </div>
 
-        <!-- Research Section -->
-        <section id="research" class="content-section">
+    <!-- Research Page -->
+    <div class="page-container" id="research-page">
+        <div class="page-content">
             <h2>Research</h2>
             <div class="research-grid">
                 <div class="research-item">
@@ -357,20 +443,24 @@
                         multiple language models collaborate or compete.</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
 
-        <!-- Group Section -->
-        <section id="group" class="content-section">
+    <!-- Group Page -->
+    <div class="page-container" id="group-page">
+        <div class="page-content">
             <h2>Group</h2>
             <p>We are a research group working at the intersection of artificial intelligence, complex systems, and
                 multiagent learning.</p>
             <p>If you are considering doing your degree with me, please take a look at information for prospective
                 students</p>
             <p>Just getting into machine learning research ? Check out the FAQ</p>
-        </section>
+        </div>
+    </div>
 
-        <!-- Students Section -->
-        <section id="students" class="content-section">
+    <!-- Students Page -->
+    <div class="page-container" id="students-page">
+        <div class="page-content">
             <h2>Information For Prospective Students</h2>
 
             <p>It's so awesome you want to come and do a graduate degree with me! I would love to hear from.
@@ -421,10 +511,12 @@
             <p>Also feel free to look at the FAQ page which I continually update.</p>
 
             <p>Good luck with your search!!</p>
-        </section>
+        </div>
+    </div>
 
-        <!-- Contact Section -->
-        <section id="contact" class="content-section">
+    <!-- Contact Page -->
+    <div class="page-container" id="contact-page">
+        <div class="page-content">
             <h2>Contact</h2>
             <div class="contact-info">
                 <p class="email">email : echo ubm.lbdinbo@sv.om| tr '[b-{]' '[a-z]'</p>
@@ -438,7 +530,7 @@
                     6525 GD Nijmegen
                 </p>
             </div>
-        </section>
+        </div>
     </div>
 
     <!-- Footer -->
@@ -448,37 +540,61 @@
 
     <script>
         // Navigation functionality
+        const homeContainer = document.getElementById('home-page');
+        const header = document.getElementById('header');
         const navLinks = document.querySelectorAll('.nav-link');
-        const sections = document.querySelectorAll('.content-section');
+        const headerNavLinks = document.querySelectorAll('.header-nav-link');
+        const pages = document.querySelectorAll('.page-container');
 
+        function showPage(pageName) {
+            if (pageName === 'home') {
+                // Show home page
+                homeContainer.classList.remove('hidden');
+                header.classList.remove('show');
+                pages.forEach(page => page.classList.remove('active'));
+            } else {
+                // Hide home page, show header and selected page
+                homeContainer.classList.add('hidden');
+                header.classList.add('show');
+                pages.forEach(page => {
+                    if (page.id === pageName + '-page') {
+                        page.classList.add('active');
+                    } else {
+                        page.classList.remove('active');
+                    }
+                });
+
+                // Update active state in header
+                headerNavLinks.forEach(link => {
+                    if (link.getAttribute('data-page') === pageName) {
+                        link.classList.add('active');
+                    } else {
+                        link.classList.remove('active');
+                    }
+                });
+
+                // Scroll to top
+                window.scrollTo(0, 0);
+            }
+        }
+
+        // Home page navigation
         navLinks.forEach(link => {
             link.addEventListener('click', (e) => {
                 e.preventDefault();
-
-                const targetSection = link.getAttribute('data-section');
-
-                // Remove active class from all links and sections
-                navLinks.forEach(l => l.classList.remove('active'));
-                sections.forEach(s => {
-                    s.classList.remove('active', 'visible');
-                });
-
-                // Add active class to clicked link
-                link.classList.add('active');
-
-                // Show target section
-                const target = document.getElementById(targetSection);
-                if (target) {
-                    target.classList.add('active');
-                    setTimeout(() => {
-                        target.classList.add('visible');
-                    }, 10);
-                }
+                const pageName = link.getAttribute('data-page');
+                showPage(pageName);
             });
         });
 
-        // Set first link as active on load
-        document.querySelector('.nav-link').classList.add('active');
+        // Header navigation
+        headerNavLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const pageName = link.getAttribute('data-page');
+                showPage(pageName);
+            });
+        });
     </script>
 </body>
 
