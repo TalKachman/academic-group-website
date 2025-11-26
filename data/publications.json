@@ -1,0 +1,40 @@
+{
+  "publications": [
+    {
+      "id": "kachman2025complex",
+      "title": "Deep Learning Approaches to Complex Systems Dynamics",
+      "authors": "Tal Kachman, Collaborator A, Collaborator B",
+      "venue": "International Conference on Machine Learning (ICML)",
+      "year": 2025,
+      "abstract": "We present a novel deep learning framework for understanding and predicting dynamics in complex systems...",
+      "pdf": "assets/pdfs/papers/kachman-2025-icml.pdf",
+      "code": "https://github.com/yourusername/complex-systems",
+      "project": null,
+      "bibtex": "@inproceedings{kachman2025complex,\n  title={Deep Learning Approaches to Complex Systems Dynamics},\n  author={Kachman, Tal and others},\n  booktitle={ICML},\n  year={2025}\n}"
+    },
+    {
+      "id": "kachman2024multiagent",
+      "title": "Multi-Agent Reinforcement Learning in Chemical Environments",
+      "authors": "Tal Kachman, Researcher X",
+      "venue": "Neural Information Processing Systems (NeurIPS)",
+      "year": 2024,
+      "abstract": "This work explores how multiple agents can learn to collaborate in chemical synthesis tasks...",
+      "pdf": "assets/pdfs/papers/kachman-2024-neurips.pdf",
+      "code": "https://github.com/yourusername/chemical-marl",
+      "project": "research.html#chemical-ai",
+      "bibtex": "@inproceedings{kachman2024multiagent,\n  title={Multi-Agent Reinforcement Learning in Chemical Environments},\n  author={Kachman, Tal and Researcher, X},\n  booktitle={NeurIPS},\n  year={2024}\n}"
+    },
+    {
+      "id": "kachman2024game",
+      "title": "Emergent Strategies in Game-Theoretic Multi-Agent Systems",
+      "authors": "Tal Kachman, Collaborator C, Collaborator D",
+      "venue": "AAAI Conference on Artificial Intelligence",
+      "year": 2024,
+      "abstract": "We investigate how strategic behaviors emerge in multi-agent systems through deep reinforcement learning...",
+      "pdf": "assets/pdfs/papers/kachman-2024-aaai.pdf",
+      "code": null,
+      "project": null,
+      "bibtex": "@inproceedings{kachman2024game,\n  title={Emergent Strategies in Game-Theoretic Multi-Agent Systems},\n  author={Kachman, Tal and others},\n  booktitle={AAAI},\n  year={2024}\n}"
+    }
+  ]
+}

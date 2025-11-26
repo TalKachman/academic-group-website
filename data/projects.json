@@ -1,0 +1,51 @@
+{
+  "projects": [
+    {
+      "id": "complex-systems",
+      "title": "Complex Systems and Emergent Behaviors",
+      "description": "Investigating the dynamics of interconnected systems and emergent collective behaviors. We explore how simple interaction rules give rise to sophisticated system-level phenomena, with applications to distributed intelligence and adaptive networks.",
+      "image": "assets/images/research/complex-systems.jpg",
+      "status": "active",
+      "funding": "NSF Grant #12345",
+      "team": ["Tal Kachman", "PhD Student A", "PhD Student B"],
+      "links": {
+        "github": "https://github.com/yourusername/complex-systems",
+        "paper": "assets/pdfs/papers/kachman-2025-icml.pdf"
+      }
+    },
+    {
+      "id": "chemical-ai",
+      "title": "Chemical AI",
+      "description": "Developing machine learning methods at the interface of chemistry and artificial intelligence. This work focuses on using AI to predict molecular properties, design novel compounds, and understand chemical reaction mechanisms.",
+      "image": "assets/images/research/chemical-ai.jpg",
+      "status": "active",
+      "funding": "Industry Partnership",
+      "team": ["Tal Kachman", "Postdoc X", "PhD Student C"],
+      "links": {
+        "github": "https://github.com/yourusername/chemical-ai"
+      }
+    },
+    {
+      "id": "game-theory-dl",
+      "title": "Game Theory with Deep Learning",
+      "description": "Applying deep reinforcement learning to game theoretic problems. We study strategic interactions in multi-agent environments, equilibrium concepts, and the emergence of cooperative and competitive behaviors in learned policies.",
+      "image": "assets/images/research/game-theory.jpg",
+      "status": "active",
+      "funding": null,
+      "team": ["Tal Kachman", "PhD Student D"],
+      "links": {}
+    },
+    {
+      "id": "llm-multiagent",
+      "title": "LLMs in Multi-Agent Systems",
+      "description": "Exploring how large language models interact in multi-agent settings. This research examines communication protocols, coordination mechanisms, and emergent linguistic behaviors when multiple language models collaborate or compete.",
+      "image": "assets/images/research/llm-agents.jpg",
+      "status": "active",
+      "funding": "University Research Grant",
+      "team": ["Tal Kachman", "MSc Student E", "MSc Student F"],
+      "links": {
+        "demo": "https://demo.example.com"
+      }
+    }
+  ]
+}

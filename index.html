@@ -20,53 +20,6 @@
             min-height: 100vh;
         }
 
-        /* Header - only on home page */
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: #fff;
-            border-bottom: 1px solid #e0e0e0;
-            z-index: 100;
-            display: none;
-        }
-
-        header.show {
-            display: block;
-        }
-
-        header nav {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 1.5rem 3rem;
-        }
-
-        header nav ul {
-            list-style: none;
-            display: flex;
-            gap: 2.5rem;
-            align-items: center;
-        }
-
-        header .site-title {
-            font-size: 1.1rem;
-            font-weight: 400;
-            letter-spacing: 0.3px;
-            margin-right: auto;
-        }
-
-        header nav a {
-            color: #666;
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: color 0.2s ease;
-        }
-
-        header nav a:hover,
-        header nav a.active {
-            color: #1a1a1a;
-        }
-
         /* Main container - home page */
         .home-container {
             max-width: 1200px;
@@ -77,10 +30,6 @@
             gap: 4rem;
             align-items: start;
             min-height: 100vh;
-        }
-
-        .home-container.hidden {
-            display: none;
         }
 
         /* Left side - Navigation */
@@ -120,7 +69,6 @@
             color: #1a1a1a;
             text-decoration: none;
             transition: all 0.3s ease;
-            cursor: pointer;
         }
 
         .nav-link:hover {
@@ -179,93 +127,6 @@
 
         .image-placeholder:hover {
             background: linear-gradient(135deg, #e8e8e8 0%, #d8d8d8 100%);
-        }
-
-        /* Content page container */
-        .page-container {
-            display: none;
-            padding-top: 6rem;
-        }
-
-        .page-container.active {
-            display: block;
-        }
-
-        .page-content {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 2rem 3rem 5rem;
-        }
-
-        .page-content h2 {
-            font-size: 1.4rem;
-            font-weight: 400;
-            margin-bottom: 2rem;
-            letter-spacing: 0.3px;
-        }
-
-        .page-content h3 {
-            font-size: 1.1rem;
-            font-weight: 500;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        .page-content p {
-            font-size: 0.95rem;
-            line-height: 1.7;
-            color: #444;
-            margin-bottom: 1rem;
-        }
-
-        .page-content ul {
-            margin-left: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .page-content li {
-            font-size: 0.95rem;
-            line-height: 1.7;
-            color: #444;
-            margin-bottom: 0.6rem;
-        }
-
-        .page-content a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-
-        .page-content a:hover {
-            text-decoration: underline;
-        }
-
-        /* Research grid */
-        .research-grid {
-            display: grid;
-            gap: 2.5rem;
-            margin-top: 2rem;
-        }
-
-        .research-item {
-            padding: 1.5rem 0;
-            border-top: 1px solid #e8e8e8;
-        }
-
-        .research-item:first-child {
-            border-top: none;
-            padding-top: 0;
-        }
-
-        .research-item h3 {
-            margin-top: 0;
-        }
-
-        /* Contact info */
-        .contact-info .email {
-            font-family: 'Courier New', monospace;
-            font-size: 0.85rem;
-            margin-bottom: 0.5rem;
-            color: #666;
         }
 
         /* Footer */
@@ -334,23 +195,8 @@
 </head>
 
 <body>
-    <!-- Header Navigation (hidden on home, shown on other pages) -->
-    <header id="header">
-        <nav>
-            <ul>
-                <li class="site-title">Tal Kachman</li>
-                <li><a href="#home" class="header-nav-link" data-page="home">Home</a></li>
-                <li><a href="#about" class="header-nav-link" data-page="about">About</a></li>
-                <li><a href="#research" class="header-nav-link" data-page="research">Research</a></li>
-                <li><a href="#group" class="header-nav-link" data-page="group">Group</a></li>
-                <li><a href="#students" class="header-nav-link" data-page="students">Students</a></li>
-                <li><a href="#contact" class="header-nav-link" data-page="contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
     <!-- Home Page -->
-    <div class="home-container" id="home-page">
+    <div class="home-container">
         <!-- Left side - Navigation -->
         <div class="nav-section">
             <h1 class="site-title">Tal Kachman</h1>
@@ -358,31 +204,31 @@
 
             <ul class="nav-list">
                 <li class="nav-item">
-                    <a href="#about" class="nav-link" data-page="about">
+                    <a href="about.html" class="nav-link">
                         <span class="robot-icon" data-robot="off"></span>
                         <span>About</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#research" class="nav-link" data-page="research">
+                    <a href="research.html" class="nav-link">
                         <span class="robot-icon" data-robot="off"></span>
                         <span>Research</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#group" class="nav-link" data-page="group">
+                    <a href="group.html" class="nav-link">
                         <span class="robot-icon" data-robot="off"></span>
                         <span>Group</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#students" class="nav-link" data-page="students">
+                    <a href="students.html" class="nav-link">
                         <span class="robot-icon" data-robot="off"></span>
                         <span>Prospective Students</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#contact" class="nav-link" data-page="contact">
+                    <a href="contact.html" class="nav-link">
                         <span class="robot-icon" data-robot="off"></span>
                         <span>Contact</span>
                     </a>
@@ -398,204 +244,10 @@
         </div>
     </div>
 
-    <!-- About Page -->
-    <div class="page-container" id="about-page">
-        <div class="page-content">
-            <h2>About</h2>
-            <p>I am currently an assistant professor in <a href="https://www.ru.nl/english/" target="_blank">Radboud
-                    University</a> at the <a href="https://www.ru.nl/ai/" target="_blank">AI department</a> and a
-                visiting assistant professor at the <a href="https://som.yale.edu/" target="_blank">Yale School of
-                    Management</a>. My main research focus is on multiagent interaction, complex systems and
-                reinforcment learning</p>
-        </div>
-    </div>
-
-    <!-- Research Page -->
-    <div class="page-container" id="research-page">
-        <div class="page-content">
-            <h2>Research</h2>
-            <div class="research-grid">
-                <div class="research-item">
-                    <h3>Complex Systems</h3>
-                    <p>Investigating the dynamics of interconnected systems and emergent collective behaviors. I explore
-                        how simple interaction rules give rise to sophisticated system-level phenomena, with
-                        applications to distributed intelligence and adaptive networks.</p>
-                </div>
-
-                <div class="research-item">
-                    <h3>Chemical AI</h3>
-                    <p>Developing machine learning methods at the interface of chemistry and artificial intelligence.
-                        This work focuses on using AI to predict molecular properties, design novel compounds, and
-                        understand chemical reaction mechanisms.</p>
-                </div>
-
-                <div class="research-item">
-                    <h3>Game Theoretical Scenarios Using Deep Learning</h3>
-                    <p>Applying deep reinforcement learning to game theoretic problems. I study strategic interactions
-                        in multi-agent environments, equilibrium concepts, and the emergence of cooperative and
-                        competitive behaviors in learned policies.</p>
-                </div>
-
-                <div class="research-item">
-                    <h3>LLM and Multi-Agent Interactions</h3>
-                    <p>Exploring how large language models interact in multi-agent settings. This research examines
-                        communication protocols, coordination mechanisms, and emergent linguistic behaviors when
-                        multiple language models collaborate or compete.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Group Page -->
-    <div class="page-container" id="group-page">
-        <div class="page-content">
-            <h2>Group</h2>
-            <p>We are a research group working at the intersection of artificial intelligence, complex systems, and
-                multiagent learning.</p>
-            <p>If you are considering doing your degree with me, please take a look at information for prospective
-                students</p>
-            <p>Just getting into machine learning research ? Check out the FAQ</p>
-        </div>
-    </div>
-
-    <!-- Students Page -->
-    <div class="page-container" id="students-page">
-        <div class="page-content">
-            <h2>Information For Prospective Students</h2>
-
-            <p>It's so awesome you want to come and do a graduate degree with me! I would love to hear from.
-                Unfortunately I get waaaaaaay too many emails these days. I <a
-                    href="https://byrslf.co/how-to-get-a-busy-person-to-respond-to-your-email-52e5d4d69671"
-                    target="_blank">I highly recommend reading this nifty little guide to writing faculty members</a>
-            </p>
-
-            <p>I can take students either through <a
-                    href="https://www.ru.nl/courseguides/socsci/master/artificial-intelligence/" target="_blank">Radboud
-                    AI</a> or the <a href="https://www.ru.nl/en/education/masters/data-science" target="_blank">data
-                    science</a> program, I welcome any and all students.</p>
-
-            <p>Albeit please consider a few things.</p>
-
-            <p>I highly recommend looking at the groups emphasis please take a look in the research tab. I love hearing
-                bright new ideas and non-obvious insights</p>
-
-            <h3>For M.Sc students:</h3>
-            <ul>
-                <li>Have you checked out the things I am scientifically interested, and working on ? Please do to see if
-                    we are aligned</li>
-                <li>I usually don't take students without meeting them and talking to them at least once.</li>
-                <li>You need to have a very high level of mathematical/analytical skills. Wonder what that? is look at
-                    some of my publications</li>
-                <li>Not a must but a great bonus if you took my course <a
-                        href="https://www.ru.nl/courseguides/socsci/courses-osiris/ai/sow-mki75-applied-machine-learning/"
-                        target="_blank">Applied Machine Learning</a></li>
-                <li>I highly encourage you to talk to my other students</li>
-            </ul>
-
-            <h3>For Ph.D students:</h3>
-            <ul>
-                <li>If you are interested in our work, and your mind is exploding with creative ideas, please contact us
-                    to explore possibilities</li>
-                <li>I am always happy to talk to any and all students on anything science related.</li>
-            </ul>
-
-            <p>If you come from an interdisciplinary background that is a huge plus and should not discourage you from
-                working with the group. I love interacting with people from all disciplines .</p>
-
-            <p>I usually don't take students without meeting them and working with them a bit to see the fit.</p>
-
-            <p>There are a lot of funding opportunities out there, I am more than happy to work with students to obtain
-                them. Have your own funding? Fantastic! If not, please see the groups website to see if I have ways to
-                fund you already</p>
-
-            <p>Also feel free to look at the FAQ page which I continually update.</p>
-
-            <p>Good luck with your search!!</p>
-        </div>
-    </div>
-
-    <!-- Contact Page -->
-    <div class="page-container" id="contact-page">
-        <div class="page-content">
-            <h2>Contact</h2>
-            <div class="contact-info">
-                <p class="email">email : echo ubm.lbdinbo@sv.om| tr '[b-{]' '[a-z]'</p>
-                <p class="email">email++ : ' nz lfz jt uif gpmmpxjoh' - <a
-                        href="https://flowcrypt.com/pub/talkachman@cerebrnita.com"
-                        target="_blank">https://flowcrypt.com/pub/talkachman@cerebrnita.com</a></p>
-                <p style="margin-top: 1.5rem;">
-                    Prof Tal Kachman<br>
-                    Maria Montessori Building 02.357<br>
-                    Thomas van Aquinostraat 4<br>
-                    6525 GD Nijmegen
-                </p>
-            </div>
-        </div>
-    </div>
-
     <!-- Footer -->
     <footer>
         <p>© 2025 Tal Kachman. All rights reserved.</p>
     </footer>
-
-    <script>
-        // Navigation functionality
-        const homeContainer = document.getElementById('home-page');
-        const header = document.getElementById('header');
-        const navLinks = document.querySelectorAll('.nav-link');
-        const headerNavLinks = document.querySelectorAll('.header-nav-link');
-        const pages = document.querySelectorAll('.page-container');
-
-        function showPage(pageName) {
-            if (pageName === 'home') {
-                // Show home page
-                homeContainer.classList.remove('hidden');
-                header.classList.remove('show');
-                pages.forEach(page => page.classList.remove('active'));
-            } else {
-                // Hide home page, show header and selected page
-                homeContainer.classList.add('hidden');
-                header.classList.add('show');
-                pages.forEach(page => {
-                    if (page.id === pageName + '-page') {
-                        page.classList.add('active');
-                    } else {
-                        page.classList.remove('active');
-                    }
-                });
-
-                // Update active state in header
-                headerNavLinks.forEach(link => {
-                    if (link.getAttribute('data-page') === pageName) {
-                        link.classList.add('active');
-                    } else {
-                        link.classList.remove('active');
-                    }
-                });
-
-                // Scroll to top
-                window.scrollTo(0, 0);
-            }
-        }
-
-        // Home page navigation
-        navLinks.forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                const pageName = link.getAttribute('data-page');
-                showPage(pageName);
-            });
-        });
-
-        // Header navigation
-        headerNavLinks.forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                const pageName = link.getAttribute('data-page');
-                showPage(pageName);
-            });
-        });
-    </script>
 </body>
 
 </html>

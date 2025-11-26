@@ -1,0 +1,36 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+*.bak
+
+# Node modules (if using npm in future)
+node_modules/
+
+# Build artifacts
+dist/
+build/
+
+# Personal/sensitive data
+*.env
+secrets.json
+
+# Large files (consider using Git LFS)
+*.mp4
+*.mov
+*.avi
+assets/videos/*
+!assets/videos/.gitkeep
+
+# Backup files
+backup/
+*.backup
