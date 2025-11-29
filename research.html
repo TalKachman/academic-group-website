@@ -26,35 +26,131 @@
 
     <main class="page-content">
         <h2>Research</h2>
-        <div class="research-grid">
-            <div class="research-item">
-                <h3>Complex Systems</h3>
-                <p>Investigating the dynamics of interconnected systems and emergent collective behaviors. I explore
-                    how simple interaction rules give rise to sophisticated system-level phenomena, with
-                    applications to distributed intelligence and adaptive networks.</p>
-            </div>
+        <p class="research-intro">Our research spans the intersection of artificial intelligence, complex systems, and computational methods. We develop novel approaches to understanding and engineering intelligent multi-agent systems.</p>
 
-            <div class="research-item">
-                <h3>Chemical AI</h3>
-                <p>Developing machine learning methods at the interface of chemistry and artificial intelligence.
-                    This work focuses on using AI to predict molecular properties, design novel compounds, and
-                    understand chemical reaction mechanisms.</p>
-            </div>
-
-            <div class="research-item">
-                <h3>Game Theoretical Scenarios Using Deep Learning</h3>
-                <p>Applying deep reinforcement learning to game theoretic problems. I study strategic interactions
-                    in multi-agent environments, equilibrium concepts, and the emergence of cooperative and
-                    competitive behaviors in learned policies.</p>
-            </div>
-
-            <div class="research-item">
-                <h3>LLM and Multi-Agent Interactions</h3>
-                <p>Exploring how large language models interact in multi-agent settings. This research examines
-                    communication protocols, coordination mechanisms, and emergent linguistic behaviors when
-                    multiple language models collaborate or compete.</p>
+        <!-- Chemical AI Research -->
+        <div class="research-theme">
+            <div class="research-theme-content">
+                <div class="research-theme-image">
+                    <img src="assets/images/research/ChemAI.png" alt="Chemical AI Research">
+                </div>
+                <div class="research-theme-text">
+                    <h3>Chemical Artificial Intelligence</h3>
+                    <p>How can AI systems advance our understanding of the natural sciences, and how can we learn from automation to autonomisation? Advancing how we conduct scientific discovery, both theoretically and experimentally, can have a profound impact on our society.</p>
+                    <div class="research-details">
+                        <p>Within the Big Chemistry consortium, we tackle groundbreaking scientific problems by utilizing a combination of Deep learning methods, Foundation models, molecular and dynamical simulations, with high-throughput experimental data to ask questions such as:</p>
+                        <ul>
+                            <li><strong>Chemical robotics and active learning:</strong> How can methodologies from reinforcement learning help us to optimize feedback for having an entirely self-driving chemical lab</li>
+                            <li><strong>Chemical language:</strong> What is the language of chemistry, and the impact of chemical language models on property prediction and small molecule design</li>
+                            <li><strong>Dynamical Chemical AI:</strong> Can deep learning systems understand complex chemical dynamics in a data-driven way? How can we better design chemical reaction models?</li>
+                        </ul>
+                        <p><strong>Selected Publications:</strong></p>
+                        <ul>
+                            <li><a href="https://pubs.acs.org/doi/10.1021/acs.jcim.4c00975" target="_blank">Modeling chemical reaction networks using neural ordinary differential equations</a><br>
+                            ACM Thöni, WE Robinson, Y Bachrach, WTS Huck, T Kachman<br>
+                            <em>Journal of Chemical Information and Modeling 65 (9), 4346-4352</em></li>
+                            <li><a href="https://pubs.rsc.org/en/content/articlelanding/2024/dd/d4dd00101j" target="_blank">What can attribution methods show us about chemical language models?</a><br>
+                            S Hödl, T Kachman, Y Bachrach, WTS Huck, WE Robinson<br>
+                            <em>Digital Discovery 3 (9), 1738-1748</em></li>
+                            <li><a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.119.038001" target="_blank">Self-organized resonance during search of a diverse chemical space</a><br>
+                            T Kachman, JA Owen, JL England<br>
+                            <em>Physical Review Letters 119 (3), 038001</em></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
+
+        <!-- Mean Field Games Research -->
+        <div class="research-theme research-theme-reverse">
+            <div class="research-theme-content">
+                <div class="research-theme-text">
+                    <h3>Game Theory & Deep Learning</h3>
+                    <p>How can Deep learning help us understand game-theoretical scenarios for unseen and generalized games?</p>
+                    <div class="research-details">
+                        <p>Understanding players' value attribution, such as Shapley value or bandit indexes, in games is fundamental; it can help us shape coalitions, influence decision-making, and plan our strategy effectively. However, calculating such indexes is computationally intensive to the point of intractable. Understanding game-theoretical scenarios using tools from AI is a key theme of our group, where we ask questions such as:</p>
+                        <ul>
+                            <li><strong>Amortized computation:</strong> Neural networks are fantastic tools for statistical inference; can we leverage them to compute such game-theoretical scenarios faster and more robustly?</li>
+                            <li><strong>Generalized value attribution:</strong> Deep learning has exceptional generalization capabilities; however, in such game-theoretical scenarios, its complex nature makes generalization difficult. How can Neural networks transfer or generalize from one scenario to other unseen ones?</li>
+                            <li><strong>Mean field limit of games:</strong> In today's agent-based scientific environment, there are many interacting players. In fact, it is so big that one can think about the continuum. How can Neural networks solve continuous-agent games?</li>
+                        </ul>
+                        <p><strong>Selected Publications:</strong></p>
+                        <ul>
+                            <li><a href="https://arxiv.org/abs/2504.13228" target="_blank">Modelling Mean-Field Games with Neural Ordinary Differential Equations</a><br>
+                            A Thöni, Y Bachrach, T Kachman<br>
+                            <em>arXiv preprint arXiv:2504.13228</em></li>
+                            <li><a href="https://link.springer.com/chapter/10.1007/978-3-031-66336-9_1" target="_blank">InfluenceNet: AI Models for Banzhaf and Shapley Value Prediction</a><br>
+                            B Kempinski, T Kachman<br>
+                            <em>Intelligent Systems Conference, 1-23</em></li>
+                            <li><a href="https://proceedings.neurips.cc/paper_files/paper/2022/hash/a2b0c23047ffa664b583e8be9e5b34f7-Abstract-Conference.html" target="_blank">Neural payoff machines: Predicting fair and stable payoff allocations among team members</a><br>
+                            D Cornelisse, T Rood, Y Bachrach, M Malinowski, T Kachman<br>
+                            <em>Advances in Neural Information Processing Systems 35, 25491-25503</em></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="research-theme-image">
+                    <img src="assets/images/research/MFGindex.png" alt="Mean Field Games Research">
+                </div>
+            </div>
+        </div>
+
+        <!-- Theory of Mind Research -->
+        <div class="research-theme">
+            <div class="research-theme-content">
+                <div class="research-theme-image">
+                    <img src="assets/images/research/tom.png" alt="Theory of Mind Research">
+                </div>
+                <div class="research-theme-text">
+                    <h3>LLM Strategizing and Theory of Mind</h3>
+                    <p>How do LLMs think, strategize, and plan, both in their interactions with humans and with one another? What is the nature of this interaction? How does it emerge?</p>
+                    <div class="research-details">
+                        <p>Large language models demonstrate impressive zero-shot reasoning abilities, but struggle significantly with long-term strategic reasoning in single or multiagent settings. Recent work shows that when placed in competitive, cooperative, or mixed-motive environments, LLMs exhibit nontrivial emergent strategic behavior.</p>
+                        <p>In today's world, so dominated by either human LLM engagement or multi-LLM interaction, understanding and making such long-term reasoning robust is key to society. We combine tools from computational Game theory, Large language models, finetuning, and training with concepts from cognitive social science to understand such things as:</p>
+                        <ul>
+                            <li><strong>Long-term hierarchical reasoning:</strong> How can we characterize the internal reasoning processes—belief modeling, deception handling, trust formation, LLM-human interactions</li>
+                            <li><strong>Emergent interaction in multi-LLM agent interaction:</strong> What stable or unstable multiagent dynamics arise when multiple LLMs recursively respond to each other across diverse settings?</li>
+                        </ul>
+                        <p><strong>Selected Publications & Challenges:</strong></p>
+                        <ul>
+                            <li><a href="https://dl.acm.org/doi/abs/10.5555/3635637.3663018" target="_blank">Game of thoughts: Iterative reasoning in game-theoretic domains with large language models</a><br>
+                            B Kempinski, I Gemp, K Larson, M Lanctot, Y Bachrach, T Kachman<br>
+                            <em>International Foundation for Autonomous Agents and Multiagent Systems</em></li>
+                            <li><a href="https://github.com/google-deepmind/theory_of_mind" target="_blank">Theory-of-Mind Challenges for LLM Agents</a><br>
+                            Push the boundaries of AI social intelligence through persuasion, trust, and strategic cooperation across four mind-bending challenges.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Training Dynamics Research -->
+        <div class="research-theme research-theme-reverse">
+            <div class="research-theme-content">
+                <div class="research-theme-text">
+                    <h3>Dynamical Aspects of Learning in Neural Networks</h3>
+                    <p>What can the underlying dynamical process of training neural networks teach us about the final state of it and its learning capacity?</p>
+                    <div class="research-details">
+                        <p>Understanding how neural networks learn from data and what the underlying dynamical process is is key to fundamental aspects of our theoretical understanding of artificial neural networks. Using deep mathematical tooling from dynamical systems, combinatorial optimization, and at-scale deep learning systems, this insight is key to our group's research.</p>
+                        <p><strong>Selected Publications:</strong></p>
+                        <ul>
+                            <li><a href="https://arxiv.org/abs/2111.05803" target="_blank">Gradients are Not All You Need</a><br>
+                            Jonathan Lorraine, Jack Parker-Holder, Paul Vicol, Aldo Pacchiano, Luke Metz, Tal Kachman, Jakob Foerster<br>
+                            <em>arXiv preprint arXiv:2111.05803, 2022</em></li>
+                            <li><a href="https://arxiv.org/abs/2112.14570" target="_blank">Lyapunov exponents for diversity in differentiable games</a><br>
+                            J Lorraine, P Vicol, J Parker-Holder, T Kachman<br>
+                            <em>arXiv preprint arXiv:2112.14570</em></li>
+                            <li><a href="https://drive.google.com/file/d/1hLCRSj8DSeruIiXJm7lqJPDGJNfQRGDm/view" target="_blank">Using bifurcations for diversity in differentiable games</a><br>
+                            Jonathan Lorraine, Jack Parker-Holder, Paul Vicol, Aldo Pacchiano, Luke Metz, Tal Kachman, Jakob Foerster<br>
+                            <em>ICML 2021 Beyond First Order Methods Workshop</em></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="research-theme-image">
+                    <img src="assets/images/research/traindynamics.png" alt="Training Dynamics Research">
+                </div>
+            </div>
+        </div>
+
     </main>
 
     <footer>

@@ -114,7 +114,120 @@ main.page-content a:hover {
     text-decoration: underline;
 }
 
-/* Research Grid */
+/* Research Page Intro */
+.research-intro {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+/* Research Themes */
+.research-theme {
+    margin-bottom: 5rem;
+    padding: 0;
+}
+
+.research-theme-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.research-theme-reverse .research-theme-content {
+    direction: rtl;
+}
+
+.research-theme-reverse .research-theme-text {
+    direction: ltr;
+}
+
+.research-theme-image {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #f8f9fa;
+}
+
+.research-theme-image:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+}
+
+.research-theme-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.research-theme-image:hover img {
+    transform: scale(1.02);
+}
+
+.research-theme-text h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+    line-height: 1.3;
+}
+
+.research-theme-text p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 1rem;
+}
+
+.research-details {
+    padding: 1.25rem;
+    background: #f8f9fa;
+    border-left: 4px solid #3498db;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    color: #555;
+    margin-top: 1.5rem;
+}
+
+.research-details p {
+    margin-bottom: 0.75rem;
+}
+
+.research-details ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.research-details li {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.research-details li a {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.research-details li a:hover {
+    text-decoration: underline;
+    color: #004999;
+}
+
+.research-details em {
+    color: #666;
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+/* Research Grid (Legacy - keeping for compatibility) */
 .research-grid {
     display: grid;
     gap: 2.5rem;
@@ -141,6 +254,24 @@ main.page-content a:hover {
     font-size: 0.85rem;
     margin-bottom: 0.5rem;
     color: #666;
+}
+
+/* Map Container */
+.map-container {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+.map-container:hover {
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.map-container iframe {
+    display: block;
 }
 
 /* Students Showcase */
@@ -374,6 +505,34 @@ footer {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 1.5rem;
     }
+
+    /* Research Themes Responsive */
+    .research-theme-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .research-theme-reverse .research-theme-content {
+        direction: ltr;
+    }
+
+    .research-intro {
+        font-size: 1rem;
+    }
+
+    .research-theme {
+        margin-bottom: 3.5rem;
+    }
+
+    /* Profile Header Responsive */
+    .profile-header {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .profile-image-large {
+        margin: 0 auto;
+    }
 }
 
 @media (max-width: 640px) {
@@ -404,5 +563,18 @@ footer {
 
     .student-photo-container {
         height: 250px;
+    }
+
+    .research-theme-text h3 {
+        font-size: 1.3rem;
+    }
+
+    .research-theme-text p {
+        font-size: 0.95rem;
+    }
+
+    .research-details {
+        padding: 1rem;
+        font-size: 0.9rem;
     }
 }
