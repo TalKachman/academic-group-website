@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Code Examples - Tal Kachman</title>
+    <title>CATALYST Lab</title>
     <link rel="stylesheet" href="css/pages.css">
     <link rel="stylesheet" href="css/syntax.css">
 </head>
@@ -14,7 +14,7 @@
     <header>
         <nav>
             <ul>
-                <li class="site-title"><a href="index.html">Tal Kachman</a></li>
+                <li class="site-title"><a href="index.html">CATALYST Lab</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="research.html">Research</a></li>
                 <li><a href="group.html">Group</a></li>
@@ -26,95 +26,15 @@
     </header>
 
     <main class="page-content">
-        <h2>Code Examples</h2>
+        <h2>Kachman Lab code</h2>
+        We put strong emphasis on engineering open source contribution and reproducibility of our papers.
+        All of our code is hosted in the <a href="https://github.com/KachmanLab">Lab’s github</a>
+        repository
 
-        <p>Here you can find code examples, implementations, and resources related to our research.</p>
-
-        <h3>Multi-Agent Deep Q-Network (DQN)</h3>
-        <p>A complete implementation of multi-agent reinforcement learning using DQN. This code demonstrates how multiple agents can learn to interact in shared environments.</p>
-
-        <div class="code-section" style="margin: 2rem 0;">
-            <p><strong>Full Implementation:</strong> <a href="content/code/example-algorithm.py" target="_blank">example-algorithm.py</a></p>
-
-            <h4>Key Components:</h4>
-
-            <div style="margin-top: 1.5rem;">
-                <p><strong>1. Q-Network Architecture</strong></p>
-                <pre><code class="language-python">class QNetwork(nn.Module):
-    """Neural network for approximating Q-values in multi-agent setting."""
-    def __init__(self, state_dim, action_dim, hidden_dim=128):
-        super(QNetwork, self).__init__()
-        self.network = nn.Sequential(
-            nn.Linear(state_dim, hidden_dim),
-            nn.ReLU(),
-            nn.Linear(hidden_dim, hidden_dim),
-            nn.ReLU(),
-            nn.Linear(hidden_dim, action_dim)
-        )
-
-    def forward(self, state):
-        return self.network(state)</code></pre>
-            </div>
-
-            <div style="margin-top: 1.5rem;">
-                <p><strong>2. Experience Replay Buffer</strong></p>
-                <pre><code class="language-python">class ReplayBuffer:
-    """Experience replay buffer for off-policy learning."""
-    def __init__(self, capacity=10000):
-        self.buffer = deque(maxlen=capacity)
-
-    def push(self, state, action, reward, next_state, done):
-        self.buffer.append((state, action, reward, next_state, done))
-
-    def sample(self, batch_size):
-        batch = random.sample(self.buffer, batch_size)
-        states, actions, rewards, next_states, dones = zip(*batch)
-        return (np.array(states), np.array(actions),
-                np.array(rewards), np.array(next_states),
-                np.array(dones))</code></pre>
-            </div>
-
-            <div style="margin-top: 1.5rem;">
-                <p><strong>3. Multi-Agent Coordination</strong></p>
-                <pre><code class="language-python">def select_actions(self, states):
-    """Epsilon-greedy action selection for all agents."""
-    actions = []
-    for i, state in enumerate(states):
-        if random.random() < self.epsilon:
-            action = random.randint(0, self.action_dim - 1)
-        else:
-            with torch.no_grad():
-                state_tensor = torch.FloatTensor(state).unsqueeze(0)
-                q_values = self.q_networks[i](state_tensor)
-                action = q_values.argmax().item()
-        actions.append(action)
-    return actions</code></pre>
-            </div>
-        </div>
-
-        <h3>Research Repositories</h3>
-        <div style="margin-top: 1.5rem;">
-            <p>Find more code examples and full research implementations on GitHub:</p>
-            <ul>
-                <li><a href="https://github.com/yourusername/complex-systems" target="_blank">Complex Systems Framework</a> - Tools for analyzing emergent behaviors</li>
-                <li><a href="https://github.com/yourusername/chemical-ai" target="_blank">Chemical AI</a> - Machine learning for molecular design</li>
-                <li><a href="https://github.com/yourusername/game-theory-dl" target="_blank">Game Theory with Deep Learning</a> - Strategic multi-agent interactions</li>
-            </ul>
-        </div>
-
-        <h3>Jupyter Notebooks</h3>
-        <p>Interactive tutorials and demonstrations are available in our research repositories. These notebooks provide step-by-step walkthroughs of key concepts and implementations.</p>
-
-        <h3>Resources</h3>
-        <ul>
-            <li><a href="content/markdown/example-post.md" target="_blank">Blog Post: Understanding Multi-Agent RL</a></li>
-            <li>Documentation and tutorials coming soon</li>
-            <li>Video demonstrations available on request</li>
-        </ul>
     </main>
 
     <footer>
-        <p>© 2025 Tal Kachman. All rights reserved.</p>
+        <p>© 2025 CATALYST Lab. All rights reserved.</p>
     </footer>
 </body>
 
