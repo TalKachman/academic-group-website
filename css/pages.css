@@ -126,19 +126,18 @@ main.page-content a:hover {
 
 /* Research Themes */
 .research-theme {
-    margin-bottom: 5rem;
+    margin-bottom: 4rem;
     padding: 0;
 }
 
 .research-theme-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 .research-theme-reverse .research-theme-content {
-    direction: rtl;
+    direction: ltr;
 }
 
 .research-theme-reverse .research-theme-text {
@@ -147,6 +146,8 @@ main.page-content a:hover {
 
 .research-theme-image {
     width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
     overflow: hidden;
     border-radius: 12px;
     box-shadow: 0 4px 16px rgba(0,0,0,0.08);
@@ -507,21 +508,16 @@ footer {
     }
 
     /* Research Themes Responsive */
-    .research-theme-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
-    .research-theme-reverse .research-theme-content {
-        direction: ltr;
-    }
-
     .research-intro {
         font-size: 1rem;
     }
 
     .research-theme {
-        margin-bottom: 3.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .research-theme-image {
+        max-width: 500px;
     }
 
     /* Profile Header Responsive */
@@ -576,5 +572,9 @@ footer {
     .research-details {
         padding: 1rem;
         font-size: 0.9rem;
+    }
+
+    .research-theme-image {
+        max-width: 100%;
     }
 }
