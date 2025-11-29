@@ -440,6 +440,36 @@ main.page-content a:hover {
     text-decoration: underline;
 }
 
+/* Social Media Icons */
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #f0f0f0;
+    color: #1a1a1a;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin: 0;
+}
+
+.social-icons a:hover {
+    background: #1a1a1a;
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
 .profile-content section {
     margin-bottom: 2.5rem;
 }
