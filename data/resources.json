@@ -1,0 +1,27 @@
+{
+  "repositories": [
+    {
+      "id": "theory-of-mind",
+      "name": "Theory-of-Mind Challenges",
+      "description": "Benchmark suite for testing LLM social intelligence through persuasion, trust, and strategic cooperation.",
+      "url": "https://github.com/google-deepmind/theory_of_mind",
+      "category": "benchmark",
+      "research_area": ["llm-theory-of-mind"],
+      "language": "Python",
+      "stars": ""
+    },
+    {
+      "id": "kachmanlab-org",
+      "name": "KachmanLab GitHub Organization",
+      "description": "Main organization repository hosting all lab code, tools, and research implementations.",
+      "url": "https://github.com/KachmanLab",
+      "category": "organization",
+      "research_area": ["llm-theory-of-mind", "chemical-ai", "game-theory", "training-dynamics"],
+      "language": "",
+      "stars": ""
+    }
+  ],
+  "datasets": [],
+  "tools": [],
+  "tutorials": []
+}

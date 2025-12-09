@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications - CATALYST Lab</title>
+    <link rel="stylesheet" href="css/pages.css">
+</head>
+
+<body>
+    <!-- Header Navigation -->
+    <header>
+        <nav>
+            <div class="site-title"><a href="index.html">CATALYST Lab</a></div>
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="publications.html" class="active">Publications</a></li>
+                <li><a href="group.html">People</a></li>
+                <li><a href="information_for_prospective_students.html">Join Us</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-content">
+        <h2>Publications</h2>
+
+        <!-- Search and Filter Controls -->
+        <div class="publications-controls">
+            <div class="search-container">
+                <input type="text" id="pub-search" class="search-bar" placeholder="Search by title, author, or keyword..." />
+            </div>
+
+            <div class="filter-container">
+                <div class="filter-group">
+                    <label for="year-filter">Year:</label>
+                    <select id="year-filter" class="filter-select">
+                        <option value="all">All Years</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="type-filter">Type:</label>
+                    <select id="type-filter" class="filter-select">
+                        <option value="all">All Types</option>
+                        <option value="journal">Journal</option>
+                        <option value="conference">Conference</option>
+                        <option value="preprint">Preprint</option>
+                        <option value="workshop">Workshop</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="theme-filter">Research Theme:</label>
+                    <select id="theme-filter" class="filter-select">
+                        <option value="all">All Themes</option>
+                        <option value="llm-theory-of-mind">LLM & Theory of Mind</option>
+                        <option value="chemical-ai">Chemical AI</option>
+                        <option value="game-theory">Game Theory & DL</option>
+                        <option value="training-dynamics">Training Dynamics</option>
+                    </select>
+                </div>
+
+                <button id="reset-filters" class="filter-reset-btn">Reset Filters</button>
+            </div>
+        </div>
+
+        <!-- Publications List -->
+        <div id="publications-container" class="publications-list">
+            <!-- Publications will be dynamically loaded here -->
+        </div>
+
+        <div id="no-results" class="no-results" style="display: none;">
+            <p>No publications found matching your criteria.</p>
+        </div>
+    </main>
+
+    <!-- BibTeX Modal -->
+    <div id="bibtex-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h3>BibTeX Citation</h3>
+            <pre id="bibtex-content" class="bibtex-display"></pre>
+            <button id="copy-bibtex" class="copy-btn">Copy to Clipboard</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 CATALYST Lab. All rights reserved.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/publications.js"></script>
+</body>
+
+</html>

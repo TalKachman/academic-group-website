@@ -1,0 +1,49 @@
+{
+  "news": [
+    {
+      "id": "hiring-2026",
+      "date": "2025-01-15",
+      "category": "hiring",
+      "title": "We're Hiring: Postdoc and 2 PhD Positions for 2026!",
+      "description": "The CATALYST Lab is looking for a postdoc and two PhD students to join our team in 2026. We're seeking talented researchers interested in LLM theory of mind, chemical AI, game theory, or training dynamics.",
+      "link": "information_for_prospective_students.html",
+      "image": ""
+    },
+    {
+      "id": "got-aamas2024",
+      "date": "2024-05-20",
+      "category": "publication",
+      "title": "Game of Thoughts Paper Accepted at AAMAS 2024",
+      "description": "Our paper on iterative reasoning in game-theoretic domains with large language models has been accepted at the International Foundation for Autonomous Agents and Multiagent Systems conference.",
+      "link": "https://dl.acm.org/doi/abs/10.5555/3635637.3663018",
+      "image": ""
+    },
+    {
+      "id": "tom-challenges-release",
+      "date": "2024-03-10",
+      "category": "event",
+      "title": "Theory-of-Mind Challenges Released",
+      "description": "We've released a new benchmark suite for testing LLM social intelligence through persuasion, trust, and strategic cooperation challenges. Available on GitHub.",
+      "link": "https://github.com/google-deepmind/theory_of_mind",
+      "image": ""
+    },
+    {
+      "id": "chemical-ai-jcim",
+      "date": "2024-02-01",
+      "category": "publication",
+      "title": "Chemical Reaction Networks Paper in JCIM",
+      "description": "Our work on modeling chemical reaction networks using neural ODEs has been published in the Journal of Chemical Information and Modeling.",
+      "link": "https://pubs.acs.org/doi/10.1021/acs.jcim.4c00975",
+      "image": ""
+    },
+    {
+      "id": "welcome-team-2024",
+      "date": "2024-09-01",
+      "category": "event",
+      "title": "Welcome to New Team Members!",
+      "description": "We're excited to welcome several new Master's and Bachelor's students to the CATALYST Lab this fall. Welcome Fynn, Veronica, Stian, Marcellina, and Samuel!",
+      "link": "group.html",
+      "image": ""
+    }
+  ]
+}
