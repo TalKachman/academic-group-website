@@ -814,3 +814,943 @@ footer {
         padding: 2rem 1.5rem;
     }
 }
+
+/* ============================================
+   PUBLICATIONS PAGE STYLES
+   ============================================ */
+
+/* Publications Controls */
+.publications-controls {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 153, 255, 0.08);
+    border: 1px solid rgba(0, 212, 255, 0.1);
+}
+
+.search-container {
+    margin-bottom: 1.5rem;
+}
+
+.search-bar {
+    width: 100%;
+    padding: 0.9rem 1.2rem;
+    font-size: 1rem;
+    border: 2px solid #e0f2fe;
+    border-radius: 8px;
+    background: #f8fcff;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.search-bar:focus {
+    outline: none;
+    border-color: #00bfff;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(0, 191, 255, 0.1);
+}
+
+.filter-container {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    flex: 1;
+    min-width: 150px;
+}
+
+.filter-group label {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #1a1a1a;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.filter-select {
+    padding: 0.7rem 1rem;
+    font-size: 0.95rem;
+    border: 2px solid #e0f2fe;
+    border-radius: 6px;
+    background: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.filter-select:hover {
+    border-color: #00d4ff;
+}
+
+.filter-select:focus {
+    outline: none;
+    border-color: #00bfff;
+    box-shadow: 0 0 0 3px rgba(0, 191, 255, 0.1);
+}
+
+.filter-reset-btn {
+    padding: 0.7rem 1.5rem;
+    background: linear-gradient(135deg, #00d4ff, #0099ff);
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.filter-reset-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 153, 255, 0.3);
+}
+
+/* Publications List */
+.publications-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.publication-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 1.8rem;
+    box-shadow: 0 2px 8px rgba(0, 153, 255, 0.08);
+    border: 1px solid rgba(0, 212, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.publication-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 153, 255, 0.15);
+    border-color: rgba(0, 212, 255, 0.3);
+}
+
+.publication-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 0.8rem;
+    line-height: 1.4;
+}
+
+.publication-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-bottom: 0.8rem;
+}
+
+.publication-authors {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.publication-venue {
+    font-size: 0.9rem;
+    color: #777;
+    font-style: italic;
+}
+
+.publication-type-badge {
+    display: inline-block;
+    padding: 0.25rem 0.7rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 0.4rem;
+    width: fit-content;
+}
+
+.type-journal {
+    background: linear-gradient(135deg, #e0f2fe, #cfe9ff);
+    color: #0066cc;
+}
+
+.type-conference {
+    background: linear-gradient(135deg, #d4f1f4, #b8e8ed);
+    color: #006d77;
+}
+
+.type-preprint {
+    background: linear-gradient(135deg, #fff4e6, #ffe4c4);
+    color: #d97706;
+}
+
+.type-workshop {
+    background: linear-gradient(135deg, #f3e8ff, #e9d5ff);
+    color: #7c3aed;
+}
+
+.publication-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-top: 0.8rem;
+}
+
+.tag {
+    padding: 0.35rem 0.9rem;
+    border-radius: 16px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.tag-llm-theory-of-mind {
+    background: linear-gradient(135deg, #e0f2fe, #dbeafe);
+    color: #0066cc;
+}
+
+.tag-chemical-ai {
+    background: linear-gradient(135deg, #d1fae5, #a7f3d0);
+    color: #047857;
+}
+
+.tag-game-theory {
+    background: linear-gradient(135deg, #fce7f3, #fbcfe8);
+    color: #be185d;
+}
+
+.tag-training-dynamics {
+    background: linear-gradient(135deg, #fef3c7, #fde68a);
+    color: #d97706;
+}
+
+.tag-deep-learning {
+    background: linear-gradient(135deg, #fef3c7, #fde68a);
+    color: #d90670;
+}
+
+.tag-mean-field-theory{
+    background: linear-gradient(135deg, #fef3c7, #fde68a);
+    color: #06d9b6;
+}
+
+
+.publication-abstract {
+    margin: 1.2rem 0;
+    padding: 1rem;
+    background: #f8fcff;
+    border-left: 3px solid #00d4ff;
+    border-radius: 0 6px 6px 0;
+}
+
+.publication-abstract p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.publication-links {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    margin-top: 1.2rem;
+}
+
+.pub-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.pub-link svg {
+    width: 16px;
+    height: 16px;
+}
+
+.pub-link-pdf {
+    background: linear-gradient(135deg, #00d4ff, #00bfff);
+    color: #ffffff;
+}
+
+.pub-link-pdf:hover {
+    background: linear-gradient(135deg, #00bfff, #0099ff);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 212, 255, 0.3);
+}
+
+.pub-link-code {
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: #ffffff;
+}
+
+.pub-link-code:hover {
+    background: linear-gradient(135deg, #059669, #047857);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.pub-link-project {
+    background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+    color: #ffffff;
+}
+
+.pub-link-project:hover {
+    background: linear-gradient(135deg, #7c3aed, #6d28d9);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+}
+
+.pub-link-bibtex {
+    background: #f0f9ff;
+    color: #0066cc;
+    border: 2px solid #e0f2fe;
+}
+
+.pub-link-bibtex:hover {
+    background: #e0f2fe;
+    border-color: #00d4ff;
+    transform: translateY(-2px);
+}
+
+/* No Results Message */
+.no-results {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: #f8fcff;
+    border-radius: 12px;
+    border: 2px dashed #e0f2fe;
+}
+
+.no-results p {
+    font-size: 1.1rem;
+    color: #777;
+}
+
+/* BibTeX Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal-content {
+    background: #ffffff;
+    margin: 5% auto;
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 700px;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-close {
+    color: #999;
+    float: right;
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.modal-close:hover {
+    color: #00d4ff;
+}
+
+.modal-content h3 {
+    margin: 0 0 1.5rem 0;
+    color: #1a1a1a;
+    font-size: 1.5rem;
+}
+
+.bibtex-display {
+    background: #f8fcff;
+    border: 2px solid #e0f2fe;
+    border-radius: 8px;
+    padding: 1.5rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    color: #1a1a1a;
+    margin-bottom: 1.5rem;
+}
+
+.copy-btn {
+    padding: 0.8rem 1.8rem;
+    background: linear-gradient(135deg, #00d4ff, #0099ff);
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.copy-btn:hover {
+    background: linear-gradient(135deg, #00bfff, #007acc);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 153, 255, 0.3);
+}
+
+.copy-btn.copied {
+    background: linear-gradient(135deg, #10b981, #059669);
+}
+
+/* ============================================
+   NEWS PAGE STYLES
+   ============================================ */
+
+.news-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.news-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 1.8rem;
+    box-shadow: 0 2px 8px rgba(0, 153, 255, 0.08);
+    border-left: 4px solid #00d4ff;
+    transition: all 0.3s ease;
+}
+
+.news-card:hover {
+    transform: translateX(8px);
+    box-shadow: 0 6px 20px rgba(0, 153, 255, 0.15);
+}
+
+.news-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.news-date {
+    font-size: 0.85rem;
+    color: #777;
+    font-weight: 500;
+}
+
+.news-category {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.category-publication {
+    background: linear-gradient(135deg, #e0f2fe, #cfe9ff);
+    color: #0066cc;
+}
+
+.category-award {
+    background: linear-gradient(135deg, #fef3c7, #fde68a);
+    color: #d97706;
+}
+
+.category-talk {
+    background: linear-gradient(135deg, #f3e8ff, #e9d5ff);
+    color: #7c3aed;
+}
+
+.category-event {
+    background: linear-gradient(135deg, #d1fae5, #a7f3d0);
+    color: #047857;
+}
+
+.category-hiring {
+    background: linear-gradient(135deg, #fce7f3, #fbcfe8);
+    color: #be185d;
+}
+
+.news-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 0.8rem;
+}
+
+.news-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.news-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #00d4ff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.news-link:hover {
+    color: #0099ff;
+    gap: 0.8rem;
+}
+
+/* ============================================
+   RESPONSIVE UPDATES FOR NEW COMPONENTS
+   ============================================ */
+
+@media (max-width: 768px) {
+    .publications-controls {
+        padding: 1.5rem;
+    }
+
+    .filter-container {
+        flex-direction: column;
+    }
+
+    .filter-group {
+        width: 100%;
+    }
+
+    .publication-card {
+        padding: 1.5rem;
+    }
+
+    .publication-title {
+        font-size: 1.1rem;
+    }
+
+    .publication-links {
+        flex-direction: column;
+    }
+
+    .pub-link {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .modal-content {
+        margin: 10% 5%;
+        padding: 1.5rem;
+    }
+
+    .bibtex-display {
+        font-size: 0.8rem;
+        padding: 1rem;
+    }
+}
+
+/* ============================================
+   ABOUT PAGE STYLES
+   ============================================ */
+
+.about-section {
+    margin-bottom: 3rem;
+}
+
+.about-section h3 {
+    font-size: 1.5rem;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #0066cc, #00d4ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.about-section ul {
+    margin: 1rem 0 1rem 1.5rem;
+}
+
+.about-section li {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.philosophy-list li,
+.culture-list li,
+.impact-list li {
+    position: relative;
+    padding-left: 0.5rem;
+}
+
+.philosophy-list li::before,
+.culture-list li::before,
+.impact-list li::before {
+    content: '→';
+    position: absolute;
+    left: -1.2rem;
+    color: #00d4ff;
+    font-weight: bold;
+}
+
+/* ============================================
+   RESOURCES PAGE STYLES
+   ============================================ */
+
+.resources-intro {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 3rem;
+    padding: 1.5rem;
+    background: #f8fcff;
+    border-left: 4px solid #00d4ff;
+    border-radius: 0 8px 8px 0;
+}
+
+.resources-section {
+    margin-bottom: 3rem;
+}
+
+.resources-section h3 {
+    font-size: 1.5rem;
+    color: #1a1a1a;
+    margin-bottom: 1.2rem;
+}
+
+.resources-section h3 svg {
+    color: #00d4ff;
+}
+
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.resource-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 1.8rem;
+    box-shadow: 0 2px 8px rgba(0, 153, 255, 0.08);
+    border: 1px solid rgba(0, 212, 255, 0.1);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.resource-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 153, 255, 0.15);
+    border-color: rgba(0, 212, 255, 0.3);
+}
+
+.resource-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    gap: 1rem;
+}
+
+.resource-card-header h4 {
+    font-size: 1.2rem;
+    color: #1a1a1a;
+    margin: 0;
+    flex: 1;
+}
+
+.resource-badge {
+    padding: 0.3rem 0.8rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+.badge-benchmark {
+    background: linear-gradient(135deg, #e0f2fe, #cfe9ff);
+    color: #0066cc;
+}
+
+.badge-organization {
+    background: linear-gradient(135deg, #d1fae5, #a7f3d0);
+    color: #047857;
+}
+
+.badge-tool {
+    background: linear-gradient(135deg, #f3e8ff, #e9d5ff);
+    color: #7c3aed;
+}
+
+.badge-codebase {
+    background: linear-gradient(135deg, #f3e8ff, #e9d5ff);
+    color: #ed903a;
+}
+
+.badge-dataset {
+    background: linear-gradient(135deg, #fef3c7, #fde68a);
+    color: #d97706;
+}
+
+.resource-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
+.resource-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.resource-lang {
+    padding: 0.3rem 0.8rem;
+    background: #f0f0f0;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    color: #666;
+    font-weight: 500;
+}
+
+.resource-links {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+}
+
+.resource-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background: linear-gradient(135deg, #00d4ff, #00bfff);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.resource-link:hover {
+    background: linear-gradient(135deg, #00bfff, #0099ff);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 212, 255, 0.3);
+}
+
+.resource-link svg {
+    width: 16px;
+    height: 16px;
+}
+
+.getting-started-list {
+    margin: 1.5rem 0 1.5rem 2rem;
+}
+
+.getting-started-list li {
+    margin-bottom: 1.2rem;
+    line-height: 1.6;
+}
+
+.commitment-section {
+    background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 2px solid rgba(0, 212, 255, 0.2);
+}
+
+.commitment-section ul {
+    list-style: none;
+    margin: 1.5rem 0;
+    padding: 0;
+}
+
+.commitment-section li {
+    margin-bottom: 1rem;
+    padding-left: 0;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .resources-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .resource-card-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* ============================================
+   TEACHING PAGE STYLES
+   ============================================ */
+
+.teaching-intro {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 3rem;
+}
+
+.teaching-section {
+    margin-bottom: 3rem;
+}
+
+.course-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 1.8rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 153, 255, 0.08);
+    border-left: 4px solid #00d4ff;
+    transition: all 0.3s ease;
+}
+
+.course-card:hover {
+    transform: translateX(8px);
+    box-shadow: 0 6px 20px rgba(0, 153, 255, 0.15);
+}
+
+.course-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.course-header h4 {
+    font-size: 1.3rem;
+    color: #1a1a1a;
+    margin: 0;
+    flex: 1;
+}
+
+.course-level {
+    padding: 0.4rem 1rem;
+    background: linear-gradient(135deg, #e0f2fe, #cfe9ff);
+    color: #0066cc;
+    border-radius: 16px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.course-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 1.2rem;
+}
+
+.course-topics {
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+}
+
+.topic-tag {
+    padding: 0.4rem 0.9rem;
+    background: #f8fcff;
+    border: 1px solid #e0f2fe;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    color: #0066cc;
+    font-weight: 500;
+}
+
+.philosophy-points {
+    margin: 1.5rem 0 1.5rem 2rem;
+}
+
+.philosophy-points li {
+    margin-bottom: 1.2rem;
+    line-height: 1.6;
+}
+
+.news-intro {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+.news-filters {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 153, 255, 0.08);
+    border: 1px solid rgba(0, 212, 255, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.news-filters label {
+    font-weight: 500;
+    color: #1a1a1a;
+}
+
+@media (max-width: 768px) {
+    .course-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .news-filters {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
