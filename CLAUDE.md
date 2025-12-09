@@ -117,19 +117,52 @@ Publications and projects are loaded dynamically from JSON files. The system use
 
 ### Styling Patterns
 
+**Color Theme**: Light Blue / Cyan / Electric Blue
+- Primary: `#00d4ff` (Bright Cyan)
+- Secondary: `#0099ff` (Electric Blue)
+- Accent: `#00bfff` (Sky Blue)
+- Light: `#7dd3fc` (Light Sky Blue)
+- Background: `#e0f2fe` / `#f0f9ff` (Ultra Light Blues)
+
 **Landing Page** ([index.html](index.html)):
 - All styles inline in `<style>` tag
 - Two-column grid layout using CSS Grid
+- **Spectacular Visual Effects**:
+  - Animated radial gradient background orbs that float and rotate
+  - Gradient text effects on title with flowing shimmer animation and drop shadows
+  - Crystal hexagonal robot icons with:
+    - Multi-layer animated gradient backgrounds
+    - Electric blue glowing ring effects with rotation
+    - Pulsing glow animations on hover
+    - Inset highlights for depth
+  - Animated electric border on main image with flowing gradients
+  - Custom gradient scrollbar with glow effects
+  - Staggered fade-in slide animations for navigation items
+  - Glowing underline effects on links
+  - Multi-layer shadow effects for depth
+  - Parallax-style image hover with filter effects
 - Sticky navigation and image sections
-- Hover effects on robot icons (`.robot-icon` shows image on hover)
 - Responsive breakpoints at 900px, 768px, 640px, and 480px
-- Mobile-optimized typography and spacing
+- Mobile-optimized with reduced orb sizes and animation intensity
 
 **Content Pages**:
 - Use [css/pages.css](css/pages.css) for consistent header navigation
+- Radial gradient background with subtle floating orbs
 - Fixed header with horizontal navigation on desktop
-- **Hamburger menu** on mobile (< 768px) with smooth slide-in navigation drawer
+- **Hamburger menu** on mobile (< 768px) with:
+  - Gradient blue bars with glow effects
+  - Smooth slide-in navigation drawer
+  - Dark overlay backdrop
 - Main content in `.page-content` container
+- **Enhanced Interactive Elements**:
+  - Navigation links with centered underline expand animation
+  - Content links with gradient underline and glow on hover
+  - Research details boxes with gradient backgrounds and hover slide effect
+  - Student cards with:
+    - Gradient backgrounds
+    - Animated gradient borders on hover
+    - Lift and scale transformations
+    - Multi-layer blue glow shadows
 - Research themes use `.research-theme` and `.research-theme-content` classes
 - Student cards use `.student-card`, `.student-photo-container`, `.student-details` structure
 
