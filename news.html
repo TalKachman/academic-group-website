@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News - CATALYST Lab</title>
+    <link rel="stylesheet" href="css/pages.css">
+</head>
+
+<body>
+    <!-- Header Navigation -->
+    <header>
+        <nav>
+            <div class="site-title"><a href="index.html">CATALYST Lab</a></div>
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="group.html">People</a></li>
+                <li><a href="information_for_prospective_students.html">Join Us</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-content">
+        <h2>Lab News & Updates</h2>
+
+        <p class="news-intro">
+            Stay up to date with the latest developments, publications, awards, and events from the CATALYST Lab.
+        </p>
+
+        <!-- Filter Controls -->
+        <div class="news-filters">
+            <label for="category-filter">Filter by category:</label>
+            <select id="category-filter" class="filter-select">
+                <option value="all">All Updates</option>
+                <option value="publication">Publications</option>
+                <option value="award">Awards</option>
+                <option value="talk">Talks & Presentations</option>
+                <option value="event">Events</option>
+                <option value="hiring">Hiring</option>
+            </select>
+        </div>
+
+        <!-- News List -->
+        <div id="news-container" class="news-list">
+            <!-- News items will be dynamically loaded here -->
+        </div>
+
+        <div id="no-news" class="no-results" style="display: none;">
+            <p>No news items found matching your criteria.</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 CATALYST Lab. All rights reserved.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/news.js"></script>
+</body>
+
+</html>

@@ -12,13 +12,19 @@
     <!-- Header Navigation -->
     <header>
         <nav>
+            <div class="site-title"><a href="index.html">CATALYST Lab</a></div>
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <ul>
-                <li class="site-title"><a href="index.html">CATALYST Lab</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="research.html">Research</a></li>
-                <li><a href="group.html" class="active">Group</a></li>
-                <li><a href="information_for_prospective_students.html">Prospective Students</a></li>
-                <li><a href="code.html">Code</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="group.html" class="active">People</a></li>
+                <li><a href="information_for_prospective_students.html">Join Us</a></li>
+                <li><a href="resources.html">Resources</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
@@ -79,51 +85,7 @@
 
             <div class="student-card">
                 <div class="student-photo-container">
-                    <img src="assets/images/group/Fynn.jpeg" alt="Fynn de Jonge" class="student-photo">
-                </div>
-                <div class="student-details">
-                    <p>Fynn Gerding</p>
-                    <p class="student-role">M.Sc. Student</p>
-                    <p class="student-research">Reinforcement learning in structure emergence environments</p>
-                </div>
-            </div>
-
-            <div class="student-card">
-                <div class="student-photo-container">
-                    <img src="assets/images/group/Veronica.jpg" alt="Fynn de Jonge" class="student-photo">
-                </div>
-                <div class="student-details">
-                    <p>Veronica Bolzonella</p>
-                    <p class="student-role">M.Sc. Student</p>
-                    <p class="student-research">Neural auto regressive models for LLM sampling</p>
-                </div>
-            </div>
-
-            <div class="student-card">
-                <div class="student-photo-container">
-                    <img src="assets/images/group/gradhero.png" alt="Fynn de Jonge" class="student-photo">
-                </div>
-                <div class="student-details">
-                    <p>Stian Gronlund</p>
-                    <p class="student-role">M.Sc. Student</p>
-                    <p class="student-research">Dynamical information theory for neural networks training</p>
-                </div>
-            </div>
-
-            <div class="student-card">
-                <div class="student-photo-container">
-                    <img src="assets/images/group/marcellina.png" alt="Marcellina Cancemi" class="student-photo">
-                </div>
-                <div class="student-details">
-                    <p>Marcellina Niechcial</p>
-                    <p class="student-role">B.Sc. Student</p>
-                    <p class="student-research">Mathematical Structure of Bifurcations in Training Dynamics</p>
-                </div>
-            </div>
-
-            <div class="student-card">
-                <div class="student-photo-container">
-                    <img src="assets/images/group/samuel.JPG" alt="Marcellina Cancemi" class="student-photo">
+                    <img src="assets/images/group/samuel.JPG" alt="Samuel Nellessen" class="student-photo">
                 </div>
                 <div class="student-details">
                     <p>Samuel Nellessen</p>
@@ -148,6 +110,21 @@
 
         </div>
 
+        <div class="alumni-section">
+            <h3>Alumni</h3>
+            <ul class="alumni-list">
+                <li><strong>Mathieu Baltussen</strong> — Ph.D. (2021–2025) — cum laude</li>
+                <li><strong>Fynn Garding</strong> — M.Sc. (2024–2025)</li>
+                <li><strong>Chiara Thöni</strong> — M.Sc. (2023–2024)</li>
+                <li><strong>Celena Jordaan</strong> — M.Sc. (2022–2023) — cum laude</li>
+                <li><strong>Shakeeb Majid</strong> — M.Sc. (2022–2023) — cum laude</li>
+                <li><strong>Thomas Rood</strong> — M.Sc. (2021–2022) — summa cum laude</li>
+                <li><strong>Daphne Cornelisse</strong> — M.Sc. (2021–2022) — summa cum laude</li>
+                <li><strong>Fynn Garding</strong> — B.Sc. (2024)</li>
+                <li><strong>Stian Gronlund</strong> — M.Sc. (2025)</li>
+                <li><strong>Marcelina Niechcial</strong> — B.Sc. (2025)</li>
+            </ul>
+        </div>
 
         <!-- <div class="student-card">
             <div class="student-photo-container">
@@ -195,6 +172,7 @@
     <footer>
         <p>© 2025 CATALYST Lab. All rights reserved.</p>
     </footer>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

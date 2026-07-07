@@ -1,0 +1,147 @@
+{
+  "members": [
+    {
+      "id": "tal-kachman",
+      "name": "Tal Kachman",
+      "role": "PI",
+      "photo": "assets/images/group/tal_k_0.jpeg",
+      "research_areas": ["llm-theory-of-mind", "chemical-ai", "game-theory", "training-dynamics"],
+      "bio": "Assistant Professor at Radboud University AI Department and Visiting Assistant Professor at Yale School of Management. Research focus on multiagent interaction, complex systems, and reinforcement learning.",
+      "email": "tal.kachman@ru.nl",
+      "links": {
+        "website": "people/tal.html",
+        "scholar": "https://scholar.google.com/citations?user=90dDCssAAAAJ&hl=en",
+        "github": "https://github.com/TalKachman",
+        "twitter": "https://x.com/TalKachman",
+        "linkedin": "https://www.linkedin.com/in/tal-kachman/"
+      }
+    },
+    {
+      "id": "benny-kempinski",
+      "name": "Benny Kempinski",
+      "role": "PhD",
+      "photo": "assets/images/group/Benny.png",
+      "research_areas": ["llm-theory-of-mind", "game-theory"],
+      "bio": "PhD student working on game theoretical LLM reasoning and deep learning driven value attribution calculation.",
+      "email": "",
+      "links": {
+        "website": "",
+        "scholar": "",
+        "github": ""
+      }
+    },
+    {
+      "id": "celena-jordaan",
+      "name": "Celena Jordaan",
+      "role": "PhD",
+      "photo": "assets/images/group/Celena.JPG",
+      "research_areas": ["chemical-ai"],
+      "bio": "PhD student focusing on deep learning for prosthetics design.",
+      "email": "",
+      "links": {
+        "website": "",
+        "scholar": "",
+        "github": ""
+      }
+    },
+    {
+      "id": "chiara-thoni",
+      "name": "Chiara Thoni",
+      "role": "PhD",
+      "photo": "assets/images/group/Chiara.jpeg",
+      "research_areas": ["chemical-ai"],
+      "bio": "PhD student working on dynamical neural network driven chemical discovery.",
+      "email": "",
+      "links": {
+        "website": "",
+        "scholar": "",
+        "github": ""
+      }
+    },
+    {
+      "id": "andrei-voinea",
+      "name": "Andrei Voinea",
+      "role": "PhD",
+      "photo": "assets/images/group/andrei.jpg",
+      "research_areas": ["llm-theory-of-mind", "chemical-ai"],
+      "bio": "PhD student developing LLM driven scientific tooling for autonomous chemical laboratories.",
+      "email": "",
+      "links": {
+        "website": "",
+        "scholar": "",
+        "github": ""
+      }
+    },
+    {
+      "id": "fynn-gerding",
+      "name": "Fynn Gerding",
+      "role": "MSc",
+      "photo": "assets/images/group/Fynn.jpeg",
+      "research_areas": ["training-dynamics"],
+      "bio": "Master's student working on reinforcement learning in structure emergence environments.",
+      "email": "",
+      "links": {
+        "website": "",
+        "scholar": "",
+        "github": ""
+      }
+    },
+    {
+      "id": "veronica-bolzonella",
+      "name": "Veronica Bolzonella",
+      "role": "MSc",
+      "photo": "assets/images/group/Veronica.jpg",
+      "research_areas": ["llm-theory-of-mind"],
+      "bio": "Master's student researching neural auto regressive models for LLM sampling.",
+      "email": "",
+      "links": {
+        "website": "",
+        "scholar": "",
+        "github": ""
+      }
+    },
+    {
+      "id": "stian-gronlund",
+      "name": "Stian Gronlund",
+      "role": "MSc",
+      "photo": "assets/images/group/gradhero.png",
+      "research_areas": ["training-dynamics"],
+      "bio": "Master's student investigating dynamical information theory for neural networks training.",
+      "email": "",
+      "links": {
+        "website": "",
+        "scholar": "",
+        "github": ""
+      }
+    },
+    {
+      "id": "marcellina-niechcial",
+      "name": "Marcellina Niechcial",
+      "role": "BSc",
+      "photo": "assets/images/group/marcellina.png",
+      "research_areas": ["training-dynamics"],
+      "bio": "Bachelor's student studying the mathematical structure of bifurcations in training dynamics.",
+      "email": "",
+      "links": {
+        "website": "",
+        "scholar": "",
+        "github": ""
+      }
+    },
+    {
+      "id": "samuel-nellessen",
+      "name": "Samuel Nellessen",
+      "role": "BSc",
+      "photo": "assets/images/group/samuel.JPG",
+      "research_areas": ["llm-theory-of-mind"],
+      "bio": "Bachelor's student working on LLM driven adversarial attacks for red teaming.",
+      "email": "",
+      "links": {
+        "website": "",
+        "scholar": "",
+        "github": ""
+      }
+    }
+  ],
+  "alumni": []
+}
